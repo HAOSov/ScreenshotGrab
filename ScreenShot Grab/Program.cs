@@ -18,6 +18,7 @@ class ScreenCapturer
     }
 
     // also thanks to http://www.code4copy.com/csharp/getting-window-rect-using-handle-on-windows-8-and-other/
+    // also thanks to google =)
     [DllImport(@"dwmapi.dll")]
     private static extern int DwmGetWindowAttribute(IntPtr hwnd, int dwAttribute, out Rect pvAttribute, int cbAttribute);
 
@@ -26,6 +27,9 @@ class ScreenCapturer
 
     [DllImport("user32.dll")]
     private static extern IntPtr GetWindowRect(IntPtr hWnd, ref Rect rect);
+    
+    [DllImport("Kernel32.dll")]
+    private static extern IntPtr lpCreationTime( lalala );
     
     [StructLayout(LayoutKind.Sequential)]
     public struct Rect
