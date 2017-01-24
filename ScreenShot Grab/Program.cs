@@ -29,7 +29,7 @@ class ScreenCapturer
     private static extern IntPtr GetWindowRect(IntPtr hWnd, ref Rect rect);
     
     [DllImport("Kernel32.dll")]
-    private static extern IntPtr lpCreationTime(GetCurrentTime );
+    private static extern IntPtr GetSystemTime(lpSystemTime, do i stupid? );
     
     [StructLayout(LayoutKind.Sequential)]
     public struct Rect
